@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Friends</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js" integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf" crossorigin="anonymous"></script>
+        
+        <style type="text/css">
+            img
+            {
+                height: 50px;
+                width: 500px;
+            }
+            /*clock{
+                font-size: 175px;
+                width: 900;
+                margin: 200px;
+                text-align: center;
+                border-radius: 20px;
+            }*/
+        </style>
+        <script type="text/javascript">
+
+            function showTime() {
+                let time = new Date();
+                let hour = time.getHours();
+                let min = time.getMinutes();
+                let sec = time.getSeconds();
+                am_pm = "AM";
+
+                if (hour > 12) {
+                    hour -= 12;
+                    am_pm = "PM";
+                }
+                if (hour == 0) {
+                    hr = 12;
+                    am_pm = "AM";
+                }
+
+                hour = hour < 10 ? "0" + hour : hour;
+                min = min <10 ? "0" + min : min;
+                sec = sec <10 ? "0" + sec : sec;
+
+                let currentTime = hour + ":" + min + ":" + sec + am_pm;
+
+                document.getElementById("clock").innerHTML = currentTime;
+                showTime();
+            }
+            function friend()
+            {
+                var f=parseInt(document.getElementById("fl").value);
+                var img=document.getElementById("fimage");
+                var fname=document.getElementById("fname");
+                var address=document.getElementById("faddress");
+                var mob=document.getElementById("fmobno");
+               //alert(f);
+                switch(f)
+                {
+                    case 1:
+                        img.src="Images/avinash.jpg";
+                        img.alt="Unable to load avinash image";
+                        fname.innerHTML="Avinash Kumar";
+                        address.innerHTML="Vill-Pali Post-Uttrain P.s-Konch Dist-Gaya";
+                        mob.innerHTML="8210215860";
+                        break;
+                    case 2:
+                        img.src="aman.jpg";
+                        img.alt="Unable to load Aman Rathore image";
+                        fname.innerHTML="Aman Rathore";
+                        address.innerHTML="Vill-Nawadih+Post+P.s-Sonaura Dist-Aurangabad";
+                        mob.innerHTML="9065716968";
+                        break;
+                    case 3:
+                        img.src="Images/blind.jpg";
+                        img.alt="Unable to load Milind image";
+                        fname.innerHTML="Milind Pathak";
+                        address.innerHTML="Vill-Unknown+Post+P.s-Unknown Dist-Aurangabad";
+                        mob.innerHTML="6201966503";
+                        break;
+                    case 4:
+                        img.src="Images/sarvesh.jpg";
+                        img.alt="Unable to load sarvesh image";
+                        fname.innerHTML="Sarvesh Kumar";
+                        address.innerHTML="Vill+Post+P.s-Tekari Dist-Gaya";
+                        mob.innerHTML="8789780918";
+                        break; 
+                    case 5:
+                        img.src="Images/brajesh.jpg";
+                        img.alt="Unable to load brajesh image";
+                        fname.innerHTML="Brajesh Kumar";
+                        address.innerHTML="Vill-Rajan Post- Unknown P.s-Dobhi Dist-Gaya";
+                        mob.innerHTML="7492989348";
+                        break;
+                    case 6:
+                        img.src="Images/nitish.jpg";
+                        img.alt="Unable to load nitish image";
+                        fname.innerHTML="Nitish Kumar";
+                        address.innerHTML="Vill+Post-GAUHARPUR P.s-Konch Dist-Gaya";
+                        mob.innerHTML="7273089399";
+                        break;
+                    case 7:
+                        img.src="Images/bala.jpg";
+                        img.alt="Unable to load bala image";
+                        fname.innerHTML="Bala G";
+                        address.innerHTML="Vill-Mahmadpur Post-Uttrain P.s-Tekari Dist-Gaya";
+                        mob.innerHTML="9576018191";
+                        break; 
+                    case 8:
+                        img.src="Images/sneha.jpg";
+                        img.alt="Unable to load sneha image";
+                        fname.innerHTML="Sneha Vahan";
+                        address.innerHTML="Vill-New Godown Post-R.S P.s-Kotwali Dist-Gaya";
+                        mob.innerHTML="7091074806";
+                        break;
+                    case 9:
+                        img.src="Images/deepa.jpg";
+                        img.alt="Unable to load deepa image";
+                        fname.innerHTML="Deepa Bharti";
+                        address.innerHTML="Vill-Rajan Post-??? P.s-????? Dist-Gaya";
+                        mob.innerHTML="6205635702";
+                        break;
+                    case 10:
+                        img.src="Images/deepu.jpg";
+                        img.alt="Unable to load deepu image";
+                        fname.innerHTML="Deepu Gupta";
+                        address.innerHTML="Vill-Dobhii Post-?? P.s-Dobhii Dist-Gaya";
+                        mob.innerHTML="9102044359";
+                        break;
+                    case 11:
+                        img.src="Images/mano.jpg";
+                        img.alt="Unable to load manohar image";
+                        fname.innerHTML="Sneha Vahan";
+                        address.innerHTML="Vill-Chiraiya tard Post-Rampur P.s-Rampur Dist-Gaya";
+                        mob.innerHTML="9771157571";
+                        break;
+                    case 12:
+                        img.src="Images/saurav.jpg";
+                        img.alt="Unable to load saurav image";
+                        fname.innerHTML="Saurav Pratap";
+                        address.innerHTML="Vill-A.P Colony Post-Rammpur P.s-Rampur Dist-Gaya";
+                        mob.innerHTML="9471431541";
+                        break;
+                    case 13:
+                        img.src="Images/shu.jpg";
+                        img.alt="Unable to load shubham image";
+                        fname.innerHTML="Shubham Kumar";
+                        address.innerHTML="Vill-A.P Colony Post-Rammpur P.s-Rampur Dist-Gaya";
+                        mob.innerHTML="797995873";
+                        break;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-12 text-center alert alert-success">
+                    <h1>Friend's List</h1>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-sm-3">
+                    
+                </div>
+                
+                <div class="col-sm-6">
+                    <h2>If you want to know about my friends, then select the drop down list.</h2>
+                    <label>Select Friend List:</label>
+                    <select id="fl" onchange="friend();" class="dropdown-toggle">
+                        <option value="1">Avinash Kumar</option>
+                        <option value="2">Aman Rathore</option>
+                        <option value="3">Milind Kumar</option>
+                        <option value="4">Sarvesh Kumar</option>
+                        <option value="5">Brajesh Kumar</option>
+                        <option value="6">Nitish Kumar</option>
+                        <option value="7">Bala G</option>
+                        <option value="8">Sneha Vahan</option>
+                        <option value="9">Deepa Bharti</option>
+                        <option value="10">Deepu Gupta</option>
+                        <option value="11">Manohar Singh</option>
+                        <option value="12">Saurav Kumar</option>
+                        <option value="13">Subham Kumar</option>
+                    </select>
+                </div>
+                
+                <div class="col-sm-3">
+                    
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-4">
+                    <!--Image will Appear in this column-->
+                    <img src="Images/cover.JPG" style="width:200px; height:200px; border-radius:200px;" id="fimage"/>
+                </div>
+                
+                <div class="col-sm-5">
+                    <table style="height: 100%; width: 100%;">
+                        <tr>
+                            <td><label>Name:</label></td>
+                            <td><label id="fname"></label></td>
+                        </tr>
+                        <tr>
+                            <td><label>Address:</label></td>
+                            <td><label id="faddress"></label></td>
+                        </tr>
+                        <tr>
+                            <td><label>Mobile No.</label></td>
+                            <td><label id="fmobno"></label></td>
+                        </tr>
+                    </table> 
+                </div>
+                <div class="col-sm-3">
+                    <p>He is best....</p><h1 id="clock"></h1>
+                    <img src="Images/cover.jpg" style="width:200px; height:200px; border-radius:200px;" id="fimage"/>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
